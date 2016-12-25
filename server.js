@@ -1,16 +1,21 @@
 var express = require('express');
+
 var app = express();
 var port = process.env.PORT || 4000;
 
+var examples = "Ex1: https://freecodetimestamp.herokuapp.com/December%2015%172015, Ex2:  https://freecodetimestamp.herokuapp.com/1450112400000";
+
 app.get('/', function (req, res) {
-  res.send('Please add a string parameter to your call');
+    res.json({
+      examples: examples
+    });
 });
 
 app.get('/:strParam', function (req, res) {
   var result = handleParam(req.params.strParam);
   var failureMessage = {
     message: "Request failed. See examples and format your request parameter accordingly",
-    examples: "Ex1: https://timestamp-ms.herokuapp.com/December%2015,%202015, Ex2: https://timestamp-ms.herokuapp.com/1450137600"
+    examples: examples
   };
   result ? res.json(result) : res.send(failureMessage);
 });
