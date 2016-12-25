@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var port = process.env.PORT || 4000;
 
 app.get('/', function (req, res) {
   res.send('Please add a string parameter to your call');
@@ -14,8 +15,8 @@ app.get('/:strParam', function (req, res) {
   result ? res.json(result) : res.send(failureMessage);
 });
 
-app.listen(4000, function () {
-  console.log('timestamp service listening at port  ' + 4000)
+app.listen((process.env.PORT || 4000), function () {
+  console.log('timestamp service listening at port  ' + port);
 });
 
 function getMonth(num){
