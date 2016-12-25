@@ -1,0 +1,25 @@
+{
+  "name": "timestamp-project",
+  "version": "1.0.0",
+  "description": "Freecode-camp timestamp microservice project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leewaygroups/timestamp-project.git"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "freecodecamp"
+  ],
+  "author": "Prince O. Onyenike",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leewaygroups/timestamp-project/issues"
+  },
+  "homepage": "https://github.com/leewaygroups/timestamp-project#readme"
+}
